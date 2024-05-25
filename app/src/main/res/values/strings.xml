@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Uber Clone</string>
+    <string name="sign_in_with_phone">Sign In with Phone</string>
+    <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="default_web_client_id" translatable="false">webClientId.apps.googleusercontent.com</string>
+
+</resources>
