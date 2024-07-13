@@ -12,7 +12,20 @@
           "package_name": "com.example.uberclone"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1016467434217-t2ismsdtbapeifs9np7jch5gbk3qq01e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uberclone",
+            "certificate_hash": "f968460b0b4671b5d858c87c8331c8c761094e82"
+          }
+        },
+        {
+          "client_id": "1016467434217-didoeaot24hdu8sdpdu3sfkmqrcc1nao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAZNT4C-lRHefWri19QH0BC_5oY1PfIWzk"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016467434217-didoeaot24hdu8sdpdu3sfkmqrcc1nao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
