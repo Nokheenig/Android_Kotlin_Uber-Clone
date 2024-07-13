@@ -5,4 +5,6 @@ data class DriverInfoModel (
     val lastName: String,
     val phoneNumber: String,
     val rating: Double
-)
+) {
+    constructor(): this( "", "", "", 0.0)
+}

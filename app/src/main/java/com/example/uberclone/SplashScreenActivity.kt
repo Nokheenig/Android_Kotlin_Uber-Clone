@@ -16,6 +16,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uberclone.models.DriverInfoModel
+import com.example.uberclone.ui.HomeActivity
 import com.example.uberclone.utils.Constants
 import com.firebase.ui.auth.AuthMethodPickerLayout
 import com.firebase.ui.auth.AuthUI
@@ -248,7 +249,8 @@ class SplashScreenActivity : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()){
                         Log.d("testDebug", "[SSA-checkUserFromFirebase] Listener-onDataChange => User already exists.")
-                        Toast.makeText(this@SplashScreenActivity, "The user already exists", Toast.LENGTH_SHORT).show()
+                        val model = snapshot.getValue(DriverInfoModel::class.java)
+                        goToHomeActivity(model!!)
                     } else {
                         Log.d("testDebug", "[SSA-checkUserFromFirebase] Listener-onDataChange => User doesn't exist yet, showing RegisterLayout ...")
                         Log.d("testDebug", "[SSA-checkUserFromFirebase] Launching showRegisterUserLayout ...")
@@ -263,6 +265,12 @@ class SplashScreenActivity : AppCompatActivity() {
                 }
             })
         Log.d("testDebug", "[SSA-checkUserFromFirebase] checkUserFromFirebase-End")
+    }
+
+    private fun goToHomeActivity(model: DriverInfoModel) {
+        Constants.currentUser = model
+        startActivity(Intent(this@SplashScreenActivity, HomeActivity::class.java))
+        finish()
     }
 
     private fun showRegisterUserLayout(){
@@ -321,6 +329,9 @@ class SplashScreenActivity : AppCompatActivity() {
                         ).show()
                         dialog.dismiss()
 
+                        goToHomeActivity(model)
+
+                        progressBar.visibility = View.GONE
                     }
             }
         }
