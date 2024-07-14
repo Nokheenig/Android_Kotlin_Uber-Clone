@@ -98,4 +98,13 @@ dependencies {
     //implementation("com.firebaseui:firebase-ui-auth")
     implementation("com.firebaseui:firebase-ui-auth:7.2.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC")
+
+    // Geofire
+    // Full GeoFire library for Realtime Database users
+    implementation ("com.firebase:geofire-android:3.2.0")
+
+    // GeoFire utililty functions for Cloud Firestore users who
+    // want to implement their own geo solution, see:
+    // https://firebase.google.com/docs/firestore/solutions/geoqueries
+    implementation ("com.firebase:geofire-android-common:3.2.0")
 }

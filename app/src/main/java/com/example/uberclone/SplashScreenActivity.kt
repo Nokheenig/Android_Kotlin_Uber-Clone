@@ -166,6 +166,7 @@ class SplashScreenActivity : AppCompatActivity() {
         Log.d("testDebug", "[SSA-showLoginLayout] showLoginLayout-End2")
     }
 
+    /*
     private fun startAuthActivity() {
         Log.d("testDebug", "[SSA-startAuthActivity] startAuthActivity-Start")
         val authMethodPickerLayout = AuthMethodPickerLayout.Builder(R.layout.sign_in_layout)
@@ -184,6 +185,7 @@ class SplashScreenActivity : AppCompatActivity() {
         Log.d("testDebug", "[SSA-startAuthActivity] AuthActivity started")
         Log.d("testDebug", "[SSA-startAuthActivity] startAuthActivity-End")
     }
+     */
 
     /*
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
