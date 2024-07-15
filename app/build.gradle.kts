@@ -107,4 +107,7 @@ dependencies {
     // want to implement their own geo solution, see:
     // https://firebase.google.com/docs/firestore/solutions/geoqueries
     implementation ("com.firebase:geofire-android-common:3.2.0")
+
+    //Circle ImageView
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }

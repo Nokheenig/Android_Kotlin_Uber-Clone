@@ -12,4 +12,12 @@ object Constants {
     fun log(className: String, methodName: String, message: String) {
         Log.d("testDebug", "[$className-$methodName] - $message")
     }
+
+    fun buildWelcomeMessage():String {
+        return StringBuilder("Welcome, ")
+            .append(currentUser?.firstName)
+            .append("")
+            .append(currentUser?.lastName)
+            .toString()
+    }
 }
